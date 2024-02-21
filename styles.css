@@ -23,6 +23,7 @@ body {
 .main_container h1 {
   font-size: 2rem;
   text-align: center;
+  font-family: monospace;
 }
 
 .matrix {
@@ -48,6 +49,8 @@ body {
 
 .levelDisp span {
   font-size: 20px;
+  font-weight: 600;
+  font-family: monospace;
 }
 
 button {

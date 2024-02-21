@@ -14,6 +14,9 @@ function startGame(){
 
     fillCommonColor(commonColor);
     fillRandomUniqueBox(uniqueColor);
+    document.getElementsByClassName("levelDispSpan")[0].style.color = commonColor;
+    document.getElementsByClassName("levelDispSpan")[1].style.color = commonColor;
+    document.getElementsByClassName("levelDispSpan")[2].style.color = commonColor;
 }
 
 function levelUp(){
@@ -127,7 +130,7 @@ function boxClicked(id){
     }
     else{
         revealUniqueBox();
-        setTimeout(failed, 2000);
+        setTimeout(failed, 1000);
     }
 }
 
