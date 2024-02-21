@@ -23,6 +23,7 @@ body {
 .main_container h1 {
   font-size: 2rem;
   text-align: center;
+  font-family: monospace;
 }
 
 .matrix {
@@ -37,14 +38,19 @@ body {
   border: 1px solid black;
 }
 
+.boxReveal {
+  border: 1px solid white;
+}
+
 .box {
   height: 70px;
   width: 70px;
-  border: 1px solid black;
 }
 
 .levelDisp span {
   font-size: 20px;
+  font-weight: 600;
+  font-family: monospace;
 }
 
 button {
