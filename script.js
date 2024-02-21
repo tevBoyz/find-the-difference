@@ -57,61 +57,61 @@ function mapLevel(level) {
         degree = 20;
         break;
     case 7:
-        degree = 19;
-        break;
-    case 8:
-        degree = 18;
-        break;
-    case 9: 
-        degree = 17;
-        break;
-    case 10:
-        degree = 16;
-        break;
-    case 11:
         degree = 15;
         break;
-    case 12:
-        degree = 14;
-        break;
-    case 13:
-        degree = 13;
-        break;
-    case 14:
+    case 8:
         degree = 12;
         break;
-    case 15:
+    case 9: 
         degree = 11;
         break;
-    case 16: 
+    case 10:
         degree = 10;
         break;
-    case 17:
+    case 11:
+        degree = 9.5;
+        break;
+    case 12:
         degree = 9;
         break;
-    case 18:
+    case 13:
+        degree = 8.5;
+        break;
+    case 14:
         degree = 8;
         break;
-    case 19:
+    case 15:
+        degree = 7.5;
+        break;
+    case 16: 
         degree = 7;
         break;
-    case 20:
+    case 17:
+        degree = 6.5;
+        break;
+    case 18:
         degree = 6;
         break;
-    case 21: 
+    case 19:
         degree = 5;
+        break;
+    case 20:
+        degree = 4;
+        break;
+    case 21: 
+        degree = 3.5;
         break;
     case 22: 
-        degree = 5;
+        degree = 3;
         break;
     case 23: 
-        degree = 5;
+        degree = 2.5;
         break;
     case 24: 
-        degree = 5;
+        degree = 2;
         break;
     case 25: 
-        degree = 5;
+        degree = 1;
         break;
     default:
         degree = 1;
@@ -126,10 +126,24 @@ function boxClicked(id){
         levelUp();
     }
     else{
-        alert( "Failed at level: "+level+". You clicked the wrong box! Try again?");
-        restart();
+        revealUniqueBox();
+        setTimeout(failed, 2000);
     }
 }
+
+function failed(){
+    alert( "Failed at level: "+level+". You clicked the wrong box! Try again?");
+    restart();
+}
+
+function revealUniqueBox(){
+    document.getElementById("matrix").style.gap = 0;
+    let box = document.querySelectorAll("box");
+    for (let i=0;i<box.length;i++){
+        box[i].removeAttribute("border");
+    }
+}
+
 // Changes the RGB/HEX temporarily to a HSL-Value, modifies that value 
 // and changes it back to RGB/HEX.
 
@@ -273,38 +287,3 @@ function fillCommonColor(commonColor){
 function restart(){
     location.reload();
 }
-
-
-
-// startTimer(20)
-
-
-
-
-// function startTimer(time){
-//     // Set the date we're counting down to
-// var countDownDate = new Date().getTime() + (time * 1000);
-
-// // Update the count down every 1 second
-// var x = setInterval(function() {
-
-//   // Get today's date and time
-//   var now = new Date().getTime();
-
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-
-//   // Time calculations for days, hours, minutes and seconds
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//   // Display the result in the element with id="demo"
-//   document.getElementById("demo").innerHTML = seconds + "s ";
-
-//   // If the count down is finished, write some text
-//   if (distance < 0) {
-//     clearInterval(x);
-//     document.getElementById("demo").innerHTML = "EXPIRED";
-//   }
-// }, 1000);
-
-// }

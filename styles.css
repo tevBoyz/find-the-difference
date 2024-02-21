@@ -37,10 +37,13 @@ body {
   border: 1px solid black;
 }
 
+.boxReveal {
+  border: 1px solid white;
+}
+
 .box {
   height: 70px;
   width: 70px;
-  border: 1px solid black;
 }
 
 .levelDisp span {
