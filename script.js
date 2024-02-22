@@ -130,7 +130,7 @@ function boxClicked(id){
     }
     else{
         revealUniqueBox();
-        setTimeout(failed, 4000);
+        setTimeout(failed, 3000);
     }
 }
 
